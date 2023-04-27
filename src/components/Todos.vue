@@ -43,7 +43,6 @@ export default {
     };
 
     const updateTodo = (todo) => {
-      debugger;
       const updatedTodo = {
         title: todo.title,
         id: todo.id,
