@@ -17,7 +17,7 @@
         v-bind:class="{ 'is-complete': todo.completed }"
       >
         <p>{{ todo.title }}</p>
-        <i v-on:click="deleteTodo(todo.id)" class="fas fa-trash-alt"></i>
+        <i v-on:click="deleteTodo(todo.id)" class="iconfont icon-shanchu"></i>
       </div>
     </div>
   </div>

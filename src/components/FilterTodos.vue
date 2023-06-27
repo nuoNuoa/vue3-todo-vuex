@@ -1,4 +1,5 @@
 <template>
+  <!-- 此组件呈现输入表单以收集要过滤的todos数量。提交后,调度onFilterTodos action。 -->
   <div>
     <form @submit="filterTodos">
       <input type="number" v-model="limit" placeholder="Add to do ..." />

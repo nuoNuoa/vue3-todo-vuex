@@ -18,6 +18,7 @@ export default Vuex.createStore({
     },
   },
   actions: {
+    //获取接口TODO列表并提交fetchTodos mutation。然后，mutation更新状态对象中的todos， 在todo.vue中调用此action
     onFetchTodos: async ({ commit }) => {
       const response = await Axios.get(
         "https://jsonplaceholder.typicode.com/todos"
@@ -36,6 +37,7 @@ export default Vuex.createStore({
       Axios.delete(`https://jsonplaceholder.typicode.com/todos/${id}`);
       commit(ACTION_TYPES.deleteTodo, id);
     },
+    //此action提交fetchTodos mutation,然后更新TODOS状态。让我们使用onFilterTodos action更新Vuex存储:
     onFilterTodos: async ({ commit }, limit) => {
       const response = await Axios.get(
         `https://jsonplaceholder.typicode.com/todos?_limit=${limit}`
